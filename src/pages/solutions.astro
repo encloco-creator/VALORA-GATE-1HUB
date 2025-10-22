@@ -1,0 +1,35 @@
+---
+import Header from "../components/core/Header.jsx";
+import Footer from "../components/core/Footer.astro";
+---
+
+<Header client:load />
+
+<main class="min-h-screen bg-[#0B0B0C] text-white px-6 py-32">
+  <section class="max-w-5xl mx-auto text-center">
+    <h1 class="text-5xl font-logo mb-6 gradient-text">Soluções Inteligentes</h1>
+    <p class="text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+      A plataforma <span class="text-white font-semibold">Valora</span> centraliza tudo o que sua operação internacional precisa —
+      de câmbio automatizado a monitoramento logístico, em um só ambiente.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass p-8 text-center hover:bg-white/10 transition">
+        <h3 class="text-xl font-semibold mb-2">🌍 Conexão Global</h3>
+        <p class="text-gray-400 text-sm">Centralize fornecedores, bancos e parceiros em um único painel integrado.</p>
+      </div>
+
+      <div class="glass p-8 text-center hover:bg-white/10 transition">
+        <h3 class="text-xl font-semibold mb-2">💹 Inteligência Financeira</h3>
+        <p class="text-gray-400 text-sm">Simule contratos de câmbio e reduza custos com algoritmos de otimização.</p>
+      </div>
+
+      <div class="glass p-8 text-center hover:bg-white/10 transition">
+        <h3 class="text-xl font-semibold mb-2">✅ Compliance 360°</h3>
+        <p class="text-gray-400 text-sm">Auditorias automáticas e relatórios inteligentes para garantir conformidade internacional.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<Footer />

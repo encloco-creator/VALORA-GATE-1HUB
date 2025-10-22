@@ -1,0 +1,44 @@
+---
+import Header from "../components/core/Header.jsx";
+import Footer from "../components/core/Footer.astro";
+---
+
+<Header client:load />
+
+<main class="min-h-screen bg-[#0B0B0C] text-white px-6 py-32 text-center">
+  <h1 class="text-5xl font-logo mb-6 gradient-text">Planos e Preços</h1>
+  <p class="text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+    Escolha o plano ideal para o seu negócio e expanda suas operações globais com segurança e eficiência.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="glass p-8 rounded-2xl hover:bg-white/10 transition">
+      <h3 class="text-2xl font-semibold mb-4">Starter</h3>
+      <p class="text-gray-400 mb-6">Ideal para pequenas operações internacionais.</p>
+      <p class="text-3xl font-logo text-white mb-6">R$ 299/mês</p>
+      <a href="/login" class="block px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">
+        Assinar
+      </a>
+    </div>
+
+    <div class="glass p-8 rounded-2xl border border-[#00FFA8]/40 hover:bg-white/10 transition">
+      <h3 class="text-2xl font-semibold mb-4 text-[#00FFA8]">Pro</h3>
+      <p class="text-gray-400 mb-6">Para empresas que buscam automação e análise em tempo real.</p>
+      <p class="text-3xl font-logo text-white mb-6">R$ 899/mês</p>
+      <a href="/login" class="block px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">
+        Assinar
+      </a>
+    </div>
+
+    <div class="glass p-8 rounded-2xl hover:bg-white/10 transition">
+      <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+      <p class="text-gray-400 mb-6">Soluções personalizadas e integrações avançadas.</p>
+      <p class="text-3xl font-logo text-white mb-6">Sob consulta</p>
+      <a href="/contact" class="block px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">
+        Contatar vendas
+      </a>
+    </div>
+  </div>
+</main>
+
+<Footer />
