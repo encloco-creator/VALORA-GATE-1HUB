@@ -1,27 +1,26 @@
 ---
-import Header from "../components/core/Header.jsx";
-import Footer from "../components/core/Footer.astro";
+import Base from "../layouts/Base.astro";
 ---
 
-<Header client:load />
+<Base>
+  <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-6">
+    <div class="w-full max-w-sm bg-white/5 border border-white/10 rounded-2xl p-6">
+      <h1 class="text-3xl font-logo mb-6 gradient-text">Acesse sua conta</h1>
 
-<main class="min-h-screen bg-[#0B0B0C] text-white px-6 py-32 flex flex-col items-center justify-center text-center">
-  <h1 class="text-5xl font-logo mb-6 gradient-text">Acesse sua conta</h1>
-  <p class="text-gray-400 mb-10 max-w-md">
-    Faça login para gerenciar suas operações, acessar relatórios e acompanhar suas integrações globais.
-  </p>
+      <form class="space-y-4">
+        <input type="email" placeholder="E-mail"
+          class="w-full p-3 bg-transparent border border-white/10 rounded-md focus:outline-none" />
+        <input type="password" placeholder="Senha"
+          class="w-full p-3 bg-transparent border border-white/10 rounded-md focus:outline-none" />
+        <button type="submit"
+          class="w-full px-4 py-3 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition backdrop-blur-md">
+          Entrar
+        </button>
+      </form>
 
-  <form class="max-w-sm w-full grid gap-6">
-    <input type="email" placeholder="E-mail" class="w-full p-3 bg-white/5 border border-white/10 rounded-md focus:outline-none" />
-    <input type="password" placeholder="Senha" class="w-full p-3 bg-white/5 border border-white/10 rounded-md focus:outline-none" />
-    <button class="px-8 py-3 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition">
-      Entrar
-    </button>
-  </form>
-
-  <p class="text-sm text-gray-400 mt-6">
-    Não tem uma conta? <a href="/contact" class="text-white underline">Fale com a equipe Valora</a>
-  </p>
-</main>
-
-<Footer />
+      <p class="text-sm text-gray-400 mt-6">
+        Não tem uma conta? <a href="/contact" class="text-white underline">Fale com a equipe Valora</a>
+      </p>
+    </div>
+  </section>
+</Base>

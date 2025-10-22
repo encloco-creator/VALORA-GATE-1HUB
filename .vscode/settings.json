@@ -1,4 +1,5 @@
 {
-    "IDX.aI.enableInlineCompletion": true,
-    "IDX.aI.enableCodebaseIndexing": true
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": false,
+  "files.eol": "\n"
 }

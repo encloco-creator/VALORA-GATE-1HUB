@@ -1,0 +1,33 @@
+---
+import { motion } from "framer-motion";
+---
+
+<section class="relative py-40 text-center bg-[#0B0B0C] border-t border-white/10 overflow-hidden">
+  <div class="absolute -top-32 left-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl animate-pulse-slow -translate-x-1/2"></div>
+
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true }}
+    class="relative z-10 max-w-4xl mx-auto px-6"
+  >
+    <h2 class="text-5xl font-logo mb-6 gradient-text">
+      Pronto para impulsionar o comércio global da sua empresa?
+    </h2>
+    <p class="text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+      Conecte-se ao futuro do comércio internacional com a <span class="text-white font-semibold">Valora</span>.
+      Inteligência, automação e resultados reais — em um único ecossistema.
+    </p>
+
+    <motion.a href="/contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}
+      class="inline-block px-10 py-4 text-lg rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition backdrop-blur-md">
+      Fale com nossa equipe
+    </motion.a>
+  </motion.div>
+</section>
+
+<style>
+  @keyframes pulse-slow { 0%,100%{opacity:.15;transform:scale(1)} 50%{opacity:.3;transform:scale(1.1)} }
+  .animate-pulse-slow { animation: pulse-slow 6s ease-in-out infinite; }
+</style>

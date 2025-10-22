@@ -1,22 +1,16 @@
 ---
-import "../styles/global.css";
-import Header from "../components/core/Header.jsx";
-import Footer from "../components/core/Footer.astro";
+import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 import AboutValora from "../components/AboutValora.astro";
-import ModulesSection from "../components/ModulesSection.astro";
-import ImpactSection from "../components/ImpactSection.astro";
 import Infographic from "../components/Infographic.astro";
+import ImpactSection from "../components/ImpactSection.astro";
+import CTASection from "../components/CTASection.astro";
 ---
 
-<Header client:load />
-
-<main class="bg-[#0B0B0C] text-white overflow-hidden">
+<Base>
   <Hero />
   <AboutValora />
-  <ModulesSection />
-  <ImpactSection />
   <Infographic />
-</main>
-
-<Footer />
+  <ImpactSection />
+  <CTASection />
+</Base>
