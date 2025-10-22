@@ -1,0 +1,127 @@
+---
+import { motion } from "framer-motion";
+---
+
+<section class="hero-section">
+  <div class="content">
+    <motion.h1
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      class="title"
+    >
+      A porta de entrada para o futuro da comunicação global.
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 1 }}
+      class="subtitle"
+    >
+      Uma plataforma inteligente que conecta importadores, exportadores e dados — 
+      com automação, IA e confiança.
+    </motion.p>
+
+    <motion.div
+      class="cta"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.8, duration: 1 }}
+    >
+      <a href="/signup" class="btn primary">Começar agora</a>
+      <a href="/about" class="btn ghost">Saiba mais</a>
+    </motion.div>
+  </div>
+
+  <motion.div
+    class="visual"
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 1, duration: 1.2 }}
+  >
+    <img src="/assets/images/home/global-network.png" alt="Rede Global Valora" />
+  </motion.div>
+</section>
+
+<style>
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  padding: 8rem 4rem;
+  background: radial-gradient(circle at 30% 20%, #101014, #0b0b0d);
+  color: #fff;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.content {
+  flex: 1 1 500px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.title {
+  font-family: "Apple Garamond", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-family: "Apple Garamond", serif;
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-family: "Apple Garamond", serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #5E6AD2;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #6E7AF8;
+  transform: translateY(-2px);
+}
+
+.btn.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.visual {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visual img {
+  width: 100%;
+  max-width: 480px;
+  filter: drop-shadow(0 0 25px rgba(94, 106, 210, 0.2));
+  border-radius: 12px;
+}
+</style>

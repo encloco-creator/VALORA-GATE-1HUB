@@ -1,0 +1,48 @@
+---
+import FadeUp from "../components/animations/FadeUp.jsx";
+---
+
+<section class="section bg-[#0E0E10] border-t border-white/10 text-center">
+  <div class="max-w-5xl mx-auto px-6">
+    <FadeUp client:visible>
+      <h2 class="section-title mb-6 gradient-text">Nossos Módulos Inteligentes</h2>
+    </FadeUp>
+
+    <FadeUp client:visible delay={0.1}>
+      <p class="text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed">
+        Cada módulo da <span class="text-white font-semibold">Valora</span> resolve um pilar essencial do comércio internacional — 
+        da gestão financeira ao compliance.
+      </p>
+    </FadeUp>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <FadeUp client:visible>
+        <div class="glass p-8 text-center hover:bg-white/10 transition">
+          <h3 class="text-xl font-semibold mb-2">Logística Global</h3>
+          <p class="text-gray-400 text-sm">Rastreamento em tempo real e integração com transportadoras.</p>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.05}>
+        <div class="glass p-8 text-center hover:bg-white/10 transition">
+          <h3 class="text-xl font-semibold mb-2">Câmbio Inteligente</h3>
+          <p class="text-gray-400 text-sm">Simule, compare e automatize contratos de câmbio.</p>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.1}>
+        <div class="glass p-8 text-center hover:bg-white/10 transition">
+          <h3 class="text-xl font-semibold mb-2">Compliance 360°</h3>
+          <p class="text-gray-400 text-sm">Verificações legais automatizadas para cada operação.</p>
+        </div>
+      </FadeUp>
+
+      <FadeUp client:visible delay={0.15}>
+        <div class="glass p-8 text-center hover:bg-white/10 transition">
+          <h3 class="text-xl font-semibold mb-2">Otimização Fiscal</h3>
+          <p class="text-gray-400 text-sm">Simplifique tributos e receba recomendações com IA.</p>
+        </div>
+      </FadeUp>
+    </div>
+  </div>
+</section>

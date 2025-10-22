@@ -1,0 +1,47 @@
+---
+import { Check, Globe, BarChart3 } from "lucide-react";
+import FadeUp from "../components/animations/FadeUp.jsx";
+---
+
+<section class="py-32 bg-[#0E0E10] text-center border-t border-white/10">
+  <div class="max-w-5xl mx-auto px-6">
+    <FadeUp>
+      <h2 class="text-4xl font-semibold mb-10">Por que a Valora Gate?</h2>
+      <p class="max-w-2xl mx-auto text-gray-400 mb-20">
+        Simplificamos o comércio internacional conectando dados, automação e IA em uma única plataforma.
+      </p>
+    </FadeUp>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <FadeUp delay={0.1}>
+        <div class="glass p-8">
+          <Globe class="mx-auto mb-4" size={40} />
+          <h3 class="text-xl font-semibold mb-2">Conexão Global</h3>
+          <p class="text-gray-400">
+            Centralize comunicação e logística entre fornecedores, bancos e agentes internacionais.
+          </p>
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.2}>
+        <div class="glass p-8">
+          <BarChart3 class="mx-auto mb-4" size={40} />
+          <h3 class="text-xl font-semibold mb-2">Inteligência Financeira</h3>
+          <p class="text-gray-400">
+            Otimize contratos de câmbio e reduza custos operacionais com análise em tempo real.
+          </p>
+        </div>
+      </FadeUp>
+
+      <FadeUp delay={0.3}>
+        <div class="glass p-8">
+          <Check class="mx-auto mb-4" size={40} />
+          <h3 class="text-xl font-semibold mb-2">Compliance 360°</h3>
+          <p class="text-gray-400">
+            Automatize verificações legais e garanta conformidade em cada operação internacional.
+          </p>
+        </div>
+      </FadeUp>
+    </div>
+  </div>
+</section>

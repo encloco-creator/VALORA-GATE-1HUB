@@ -1,21 +1,82 @@
-html,
-body {
-	height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply bg-[#0B0B0C] text-white font-sans antialiased;
 }
 
-body {
-	max-width: 1920px;
-	margin: 0 auto;
-	background-color: var(--theme-bg);
-	position: relative;
+/* Efeito de vidro translúcido */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
 }
 
-pre {
-  padding: 1em;
-  border-radius: 0.5em;
-  overflow: auto;
+/* Gradiente de texto elegante */
+.gradient-text {
+  background: linear-gradient(to right, #ffffff, #d8d8d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-pre .language-id {
-  display: none;
+/* Tipografia da marca */
+.font-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+/* ========================================= */
+/* 🪶 Tipografia Editorial - VALORA */
+/* ========================================= */
+
+/* Fonte padrão dos títulos e hero */
+h1, h2, h3, .title, .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  color: #F5F5F5;
+  line-height: 1.2;
+}
+
+/* Títulos principais (Hero, seções grandes) */
+h1, .hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  background: linear-gradient(to right, #ffffff, #d8d8d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: none;
+}
+
+/* Subtítulos e seções intermediárias */
+h2, .section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #e0e0e0;
+}
+
+/* Títulos menores ou de cards */
+h3 {
+  font-size: 1.25rem;
+  color: #d0d0d0;
+  font-weight: 600;
+}
+
+/* Parágrafos e textos longos */
+p {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #bcbcbc;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+/* Botões refinados */
+button, a.btn {
+  @apply px-6 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition backdrop-blur-md;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Ajustes visuais */
+.section {
+  @apply py-24 md:py-32 px-6;
 }

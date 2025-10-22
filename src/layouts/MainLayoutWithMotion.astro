@@ -1,0 +1,20 @@
+---
+import BaseHead from '../components/head/BaseHead.astro';
+import Navbar from '../components/Navbar.tsx';
+import FadeInWrapper from '../components/FadeInWrapper.tsx';
+import '../styles/global.css';
+---
+
+<html lang='pt-BR'>
+  <head>
+    <BaseHead title='Valora - Inteligência no Comércio Internacional' />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main id='content' style='padding-top:80px'>
+      <FadeInWrapper client:load>
+        <slot />
+      </FadeInWrapper>
+    </main>
+  </body>
+</html>
